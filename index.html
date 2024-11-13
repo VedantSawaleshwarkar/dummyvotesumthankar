@@ -1,96 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>डमी मतदान यंत्र</title>
+    <style>
+        /* Common styles */
+        .button-base {
+            text-align: center;
+            height: 65px;
+            width: 20%;
+            line-height: 65px;
+            cursor: pointer;
+            font-size: 22px;
+            text-transform: uppercase;
+            color: #F0F0F0;
+            border-radius: 30px;
+            border-bottom: 4px solid #4D43B2;
+            box-shadow: 6px 6px 6px #999;
+            user-select: none;
+            background: #393186;
+            transition: all .05s linear;
+            margin: 10px 0;
+        }
+
+        .button-base:active {
+            box-shadow: 2px 2px 2px #777;
+            border-bottom: 1px solid #FFB909;
+            transform: translateY(3px);
+        }
+
+        /* Table styles */
+        .voting-table {
+            margin: 0 auto;
+            width: 98%;
+            text-align: center;
+            border-collapse: collapse;
+            font-family: Akshar, sans-serif;
+            font-size: 4vw;
+        }
+
+        .voting-table td {
+            border: 2px solid #000000;
+            padding: 10px;
+        }
+
+        .highlight-row {
+            background-color: #ffe95e;
+        }
+
+        .highlight-text {
+            color: #333333;
+            font-weight: bold;
+        }
+
+        /* Responsive image sizes */
+        .bulb-image {
+            width: 6vw;
+        }
+
+        .symbol-image {
+            width: 10vw;
+            height: 10vw;
+        }
+
+        /* Flex alignment for title and machine number */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Akshar, sans-serif;
+            font-size: 4vw;
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header Section -->
+<div style="text-align:center; font-family: Akshar, sans-serif; font-size:4vw; margin-top:30px">
+    ९४ - हिंगोली विधानसभा सार्वजनिक निवडणूक २०२४ <br>
+</div>
+<div class="button-base buttonIntro" style="width:80% !important; margin:20px auto; font-family: Akshar, sans-serif; font-size:3vw">
+    डेमो मतदानासाठी कपाट निशाणी समोरील निळे बटण दाबावे
+</div>
+<div class="header-container">
+    <div>डमी मतदान यंत्र</div>
+    <div>मशीन क्र. २</div>
+</div>
+
+<!-- Instructions Section -->
+
+
+<!-- Voting Table -->
+<table class="voting-table">
+    <!-- Table headers -->
+    <tr>
+        <td>S.No.</td>
+        <td>Name of Candidate</td>
+        <td>Election <br> Symbol</td>
+        <td>Bulb</td>
+        <td>Button</td>
+    </tr>
+    <!-- Dynamic rows will be inserted here -->
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Audio elements
+        const audioElements = {
+            error: new Audio('error.mp3'),
+            correct: new Audio('correct.wav'),
+            last: new Audio('audio.mp3')
+        };
+
+        // Generate voting rows
+        const totalRows = 34;
+        const votingTable = $('.voting-table');
+
+        for (let i = 18; i <= totalRows; i++) {
+            const isHighlightRow = i === 23;
+            const row = $('<tr>').addClass(isHighlightRow ? 'highlight-row' : '');
+
+            // Add row content, with empty S.No. and no bulb image for rows after 23
+            row.append(`
+                <td>${i <= 23 ? i : ''}</td>
+                <td class="${isHighlightRow ? 'highlight-text' : ''}">${isHighlightRow ? 'सुमठानकर रामदास पाटील' : ''}</td>
+                <td>${isHighlightRow ? '<img src="logo.png" class="symbol-image">' : ''}</td>
+                <td>${i <= 23 ? `<img id="errorimage${i}" src="bulb.png" class="bulb-image">` : (i === 24 ? '' : '')}</td>
+                <td><div id="errorbtn${i}" class="${isHighlightRow ? 'buttonCorrect' : 'button'} button-base" style="width:100% !important">${isHighlightRow ? 'बटण दाबा' : (i === 24 ? '' : '')}</div></td>
+            `);
+
+            votingTable.append(row);
+        }
+
+        // Insert a new row immediately after row 23, without the bulb image
+        const newRow = $('<tr>');
+        newRow.append(`
+            <td></td>
+            <td> नोटा </td>
+            <td></td>
+            <td><img id="errorimage24" src="bulb.png" class="bulb-image"></td> <!-- No bulb image here -->
+            <td><div id="newbtn" class="button-base" style="width:100% !important"></div></td>
+        `);
+
+        // Append new row after row 23
+        votingTable.find('tr').eq(6).after(newRow);
+
+        // Event handlers
+        function playAudio(type) {
+            audioElements[type].load();
+            audioElements[type].play();
+        }
+
+        function handleButtonClick(buttonId) {
+            const imageId = `errorimage${buttonId}`;
+            const image = document.getElementById(imageId);
+            if (image && buttonId <= 25) { // Only change image for rows up to S.No. 23
+                image.src = "bulbred.png";
+                setTimeout(() => {
+                    image.src = "bulb.png";
+                }, 2000);
+            }
+        }
+
+        // Bind events
+        $('.button').on('mousedown mouseup', function() {
+            // Play audio only for buttons up to S.No. 23
+            const buttonId = $(this).attr('id').replace('errorbtn', '');
+            if (buttonId <= 23) playAudio('error');
+        });
+
+        $('.buttonCorrect').on('mousedown mouseup', () => {
+            playAudio('correct');
+            setTimeout(() => playAudio('last'), 1000);
+        });
+
+        // Bind click events for all buttons up to S.No. 23
+        for (let i = 1; i <= 23; i++) {
+            $(`#errorbtn${i}`).click(() => handleButtonClick(i));
+        }
+
+        // Bind click event for the new button in the inserted row (Row 24)
+        $('#newbtn').on('mousedown mouseup', () => {
+            playAudio('error');
+        });
+    });
+</script>
+</body>
 </html>
+
